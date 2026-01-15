@@ -1,24 +1,20 @@
 ﻿apiVersion: apps/v1
 kind: Deployment
-# ...
----
-apiVersion: v1
-kind: Service
-# ...
 metadata:
-  name: dotnet-app-deployment
+  name: helloworld-deployment
 spec:
-  replicas: 3 # App ကို ၃ ခု ပွားပြီး run မည်
+  replicas: 2
   selector:
     matchLabels:
-      app: dotnet-app
+      app: helloworld
   template:
     metadata:
       labels:
-        app: dotnet-app
+        app: helloworld
     spec:
       containers:
-      - name: dotnet-container
-        image: mydockerapp/dotnet-app:v1 # သင်၏ docker image
+      - name: helloworld
+        image: helloworldapi
+        imagePullPolicy: Always
         ports:
-        - containerPort: 8080 # .NET 8 အတွက် standard port
+        - containerPort: 82

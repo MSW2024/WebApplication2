@@ -361,3 +361,10 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Ignore folder
+git init
+git add .
+git commit -m "Initial commit with Dockerfile"
+git remote add origin <https://github.com/MSW2024/repohelloworld>
+git push -u origin main
