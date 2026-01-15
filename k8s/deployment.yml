@@ -15,6 +15,6 @@ spec:
       containers:
       - name: helloworld
         image: helloworldapi
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: 82
